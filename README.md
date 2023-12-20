@@ -32,7 +32,7 @@ Esse `add` é necessário antes de darmos o commit.
 
 * `git commit -m "primeiro commit"` dar o commit no repositório.
 
-* `git branch -M "main"` para alterar o nome da branch principal de `master` para `main` (isso é uma boa prática atualmente recomendada)
+* `git branch -M "main"` para alterar o nome da branch principal de `main` para `main` (isso é uma boa prática atualmente recomendada)
 
 ## Interfaces Git
 
@@ -203,151 +203,152 @@ E aproveitando já aperta o Star para fortalecer o repo!
 
 Até a próxima...
 
-## Clone
+
+![Source](img/comandos.gif)
 
 ## Configurações Globais
 
-# Configurar o editor padrão e a branch inicial
+* Configurar o editor padrão e a branch inicial
 ```
 git config --global core.editor vim
 git config --global init.defaultBranch main
 ```
-# Visualizar as configurações globais
+* Visualizar as configurações globais
 ```
 cat ~/.gitconfig
 ```
-# Configurar o editor do sistema para uso global com o Vim
+* Configurar o editor do sistema para uso global com o Vim
 ```
 git config --system core.editor vim
 ```
 ## Inicialização de Repositório
 
-# Inicializar um repositório Git
+* Inicializar um repositório Git
 ```
 git init
 ```
 ## Gerenciamento de Arquivos
 
-# Adicionar um arquivo para ser rastreado
+* Adicionar um arquivo para ser rastreado
 ```
 git add arquivo.txt
 ```
-# Desfazer a adição de um arquivo
+* Desfazer a adição de um arquivo
 ```
 git reset
 ```
-# Efetuar um commit
+* Efetuar um commit
 ```
 git commit
 ```
 ## Gerenciamento de Commits
 
-# Adicionar e commitar alterações de forma rápida
+* Adicionar e commitar alterações de forma rápida
 ```
 git commit -a -m "Commit rápido para arquivo.txt"
 ```
-# Visualizar o histórico de commits
+* Visualizar o histórico de commits
 ```
 git log
 ```
-# Visualizar o histórico de um arquivo específico
+* Visualizar o histórico de um arquivo específico
 ```
 git log -p arquivo.txt
 ```
-# Reverter para um commit específico
+* Reverter para um commit específico
 ```
 git checkout 2cc62bbe0f7fcfb4483df968fb169dc85e01cfa4
 ```
-# Reverter para a branch principal
+* Reverter para a branch principal
 ```
 git checkout main
 ```
-# Desfazer o último commit sem perder alterações
+* Desfazer o último commit sem perder alterações
 ```
 git reset --soft HEAD~1
 ```
-# Desfazer o último commit e descartar alterações
+* Desfazer o último commit e descartar alterações
 ```
 git reset --hard
 ```
 ## Ignorando Arquivos
 
-# Utilize o arquivo .gitignore para especificar quais arquivos não devem ser incluídos no repositório.
+* Utilize o arquivo .gitignore para especificar quais arquivos não devem ser incluídos no repositório.
 
 ## Gerenciamento de Branches
 
-# Criar uma nova branch
+* Criar uma nova branch
 ```
 git branch feature/novo_arquivo
 ```
-# Mudar para uma branch específica
+* Mudar para uma branch específica
 ```
 git checkout feature/novo_arquivo
 ```
-# Mudar o nome da branch atual
+* Mudar o nome da branch atual
 ```
 git branch -m novo_nome
 ```
-# Deletar uma branch
+* Deletar uma branch
 ```
 git branch -D nome_da_branch
 ```
 ## Merge
 
-# Criar uma nova branch e efetuar o merge
+* Criar uma nova branch e efetuar o merge
 ```
 git checkout -b stg
 git checkout main
 git merge stg
 ```
-# Deletar uma branch após o merge
+* Deletar uma branch após o merge
 ```
 git branch -d stg
 ```
 ## Rebase
 
-# Atenção: O uso de rebase pode reescrever o histórico, use com cuidado.
+* Atenção: O uso de rebase pode reescrever o histórico, use com cuidado.
 ```
 git rebase stg
 ```
 ## Cherry Pick
 
-# Selecionar commits específicos de uma branch e aplicá-los em outra
+* Selecionar commits específicos de uma branch e aplicá-los em outra
 ```
 git log
 git cherry-pick 5801dac2c67519a4041666421149877c39439a20
 ```
 ## Git Tag
 
-# Listar todas as tags
+* Listar todas as tags
 ```
 git tag
 ```
-# Criar uma tag
+* Criar uma tag
 ```
 git tag -a v2.0 -m "Versão 2.0"
 ```
-# Adicionar uma tag a um commit específico
+* Adicionar uma tag a um commit específico
 ```
 git tag -a v1.0 -m "Versão 1.0" 5801dac2c67519a4041666421149877c39439a20
 ```
-# Visualizar detalhes de uma tag
+* Visualizar detalhes de uma tag
 ```
 git show v2.0
 ```
-# Deletar uma tag
+* Deletar uma tag
 ```
 git tag -d v2.0
 ```
 ## Trabalhando com repositório remoto
 
-# Criar e commitar em uma nova branch
+* Criar e commitar em uma nova branch
 ```
 git checkout -b branchnova
 git add .
 git commit -m "Aletração em arquivo main.txt (teste remoto)"
 ```
-# Realizar o merge na branch principal e fazer o push
+* Realizar o merge na branch principal e fazer o push
 ```
 git branch main
 git checkout main
@@ -356,17 +357,17 @@ git push
 ```
 ## Lidando com conflito
 
-# Realizar fetch e validar/listar branches existentes
+* Realizar fetch e validar/listar branches existentes
 ```
 git fetch origin
 git branch -r
 ```
-# Realizar checkout na branch remota e validar diferenças
+* Realizar checkout na branch remota e validar diferenças
 ```
 git checkout origin/main
 git diff main origin/main
 ```
-# Realizar merge após ajustes e commit
+* Realizar merge após ajustes e commit
 ```
 git checkout main
 git merge origin main
@@ -375,7 +376,7 @@ git push
 ```
 ## Git Log
 
-# Diversas opções de visualização do histórico
+* Diversas opções de visualização do histórico
 ```
 git log --oneline
 git log
@@ -387,11 +388,11 @@ git log --after="1 week ago"
 ```
 ## Publicação
 
-# Adicionar, commitar e fazer push para a branch master
+* Adicionar, commitar e fazer push para a branch main
 ```
 git add .
 git commit -m "Script para validação cn - azure e ops"
-git push origin master
+git push origin main
 ```
 Espero que este guia seja útil para entender e utilizar o Git de forma eficiente. Sinta-se à vontade para personalizar conforme necessário.
 
