@@ -76,8 +76,30 @@ Primeira coisa que faremos então é alterar esse arquivo que já commitamos
 * Lembrando que para alterar algo no nosso respositório do Github precisamos dar o push, então `git push origin main` (sem o -u)
 
 Se olharmos agora o nosso código no Github, ele terá sido alterado, e não só isso, se clicarmos no nome do `commit`, podemos ver exatamente as alterações que foram feitas nele.
-O verde com `+` e o vermelho com `-` mostra, os conteúdos que foram adicionados e editados dentro do código.
+
+![Source](img/commit1.png)
+
 Aqui nesse botão poderemos ver todos os commits já feitos anteriormente, então se clicarmos em algum deles, veremos exatamente o que havia sido alterado, além de claro, vermos o código como era. Incrível né?
+
+![Source](img/commit2.png)
+
+O verde com `+` e o vermelho com `-` mostra, os conteúdos que foram adicionados e editados dentro do código.
+![Source](img/commit3.png)
+
+## Branch
+
+Até agora tudo o que fizemos de alterações e mandamos de commit, foi na nossa `main`, que é aquela linha do tempo principal.
+Agora vou mostrar pra vocês como criamos uma branch e depois como que juntamos ela com o código que já está na `main` (lembrando que ela é uma linha cronológica adicional/alternativa a principal)
+E outra, a branch pode ser criada tanto para quando você for fazer uma alteração em um arquivo, quando para adicionar outro arquivo dentro do projeto ou mesmo excluir.
+<br>
+Obs. *Lembrem que eu estou aqui editando um arquivo markdown, porém isso tudo vale para qualquer tipo de arquivo com qualquer extensão*
+
+* Nesse caso vamos adicionar um novo arquivo para desenvolver a nossa feature `Flow-Git`
+
+* Então a primeira coisa que fazemos é `git checkout -b "dev"`, assim criando uma branch para ele
+Esse comando além de criar a branch já entra nela com o checkout, inclusive se olharmos agora aqui no meu VSCode, estamos dentro dela.
+
+
 
 ## Configurações Globais
 
