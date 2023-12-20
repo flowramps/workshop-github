@@ -28,6 +28,30 @@ Foi criada uma pasta `.git` e é ali que toda a mágica acontece, então não ap
 * `git add README.md` para colocar o arquivo na área de stagging 
 ![Source](img/staging.gif)
 
+Esse `add` é necessário antes de darmos o commit.
+
+* `git commit -m "primeiro commit"` dar o commit no repositório.
+
+* `git branch -M "main"` para alterar o nome da branch principal de `master` para `main` (isso é uma boa prática atualmente recomendada)
+
+## Interfaces Git
+
+Beleza, recebemos a confirmação de que o commit aconteceu, mas isso tá um pouco abstrato ainda né?
+Existem algumas [interfaces legais do git](https://git-scm.com/downloads/guis) que você pode fazer o download para poder visualizar como está o projeto, o que foi alterado em cada commit, quando foi alterado etc.
+Aqui eu vou mostrar pra vocês a usarem direto no Github.
+
+## Repositório no Github
+
+* Depois de você ter criado a sua conta na plataforma, você irá em `Criar novo repositório`
+
+Você vai preencher com as informações do projeto, então dar o nome do repositório, colocar uma breve descrição e criar
+
+![Source](img/new-repository.png)
+
+Logo depois vai aparecer essa página um pouco cinza e confusa e com vários comandos (pode até perceber que alguns deles já usamos), mas o que você tem que fazer é bem simples, apenas copie o link que aparecer para você
+
+![Source](img/quick-setup.png)
+
 ## Configurações Globais
 
 # Configurar o editor padrão e a branch inicial
