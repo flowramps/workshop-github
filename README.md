@@ -98,8 +98,112 @@ Obs. *Lembrem que eu estou aqui editando um arquivo markdown, porém isso tudo v
 
 * Então a primeira coisa que fazemos é `git checkout -b "dev"`, assim criando uma branch para ele
 Esse comando além de criar a branch já entra nela com o checkout, inclusive se olharmos agora aqui no meu VSCode, estamos dentro dela.
+![Source](img/checkout1.png)
 
+* Vou então criar o arquivo, criar o `flow-git.md` "aqui eu crio o arquivo"
 
+![Source](img/new-arquivo.png)
+
+* E agora fazemos o passo a passo que já sabemos, colocamos a nossa alteração em stagging com o `git add .` e commitamos com o `git commit -m "novo arquivo"`
+
+* Para enviarmos agora que vai ser diferente. Vocês lembram que utilizávamos o `git push orgin main` né? Porém main era aquela branch principal. Agora então usaremos `git push origin dev`
+
+![Source](img/new-branch.png)
+
+Agora se olharmos o nosso Github, veremos que tem 2 branches, a `main` e a `dev`
+
+![Source](img/new-branch1.png)
+
+Vamos supor que eu ainda não tivesse terminado de desenvolver, eu poderia continuar tranquilamente na branch `dev` até terminar!
+
+Mas Ramps, e se eu precisasse por algum motivo voltar naquela branch `main` e desenvolver a partir do que deixei lá? Sem problemas, a única coisa que você precisa fazer nesse caso é `git checkout main`, e pra voltar depois é só `git checkout dev` novamente
+
+Beleza! Agora desenvolvi tudo o que queria aqui na branch `dev`, como que junto ela com a main sem conflitos? É através do merge, vejamos abaixo!
+
+## Merge
+
+* Agora o que precisamos fazer é ir para a nossa branch principal `git checkout main` e lá faremos o merge com a branch `dev` que criamos, com `git merge dev`
+
+Pronto, agora tudo o que tinha de alteração na branch `dev` juntou com a `main`
+
+![Source](img/checkout2.png)
+
+* Para finalizar então, vamos jogar lá no Github isso tudo com o `git push origin main`
+
+## Clone
+
+Como vocês podem baixar meu código?
+
+Sempre que você entrar em um repositório, seja o seu ou o de qualquer outra pessoa, terá esse botão `Code`, que quando você clica aparece um link:
+
+![Source](img/code.png)
+
+* Você irá copiar esse link e levar ele lá pro nosso terminal
+
+* O comando para puxar o projeto para a sua máquina é o `git clone https://github.com/flowramps/workshop-github.git`
+
+Não é necessário criar um repositório antes disso, como fizemos anteriormente com o `git init`. Dessa vez, basta abrir o terminal e clonar o projeto e tudo aparecerá!
+
+## Pull
+
+E se eu fizer uma alteração no repositório, como vocês podem atualizar na máquina de vocês?
+
+* Basta vocês executarem o comando `git pull`, ele irá puxar todas as alterações feitas no repositório do Github para o seu repositório local
+
+## Fork
+
+Mas Ramps quando eu fiz o clone do seu repositório ele não apareceu no meu Github.
+Existe a ferramenta `fork`, que é bem mais simples para fazer isso
+Você só precisa apertar nesse botão dentro do repositório e sucesso jovem! Ele aparece automaticamente lá na sua conta:
+
+Clica e faça o teste pra você ver como vai ficar!
+
+![Source](img/fork.png)
+
+## Pull request
+
+O último conceito que quero ensinar para vocês é o de Pull Request ou como falamos de `PR`, vamos entender como ele funciona:
+
+* Após você ter dado um fork no projeto e ele ter ido pra sua conta, você poderá alterar o projeto e adicionar as funcionalidades que deseja
+
+* Você pode por exemplo dar um fork no meu repositório de `workshop-github` e ir melhorando o conteudo do seu `README.md` ou adicionar mais conteúdos que possam ajudar a comunide em seu desenvolvimento por exemplo nessa página. 
+
+* Depois disso, você poderá salvar o projeto, dar o `git add .`, `git commit -m "trecho PR"` e `git push origin main` como vimos nos passos anteriores.
+
+Quando você for olhar o seu Github, verá que existe uma mensagem parecida com a seguinte:
+![Source](img/pr.png)
+
+Isso significa que a branch do seu repositório está 1 commit "na frente" da branch original
+
+O que você deve perceber agora é esse botão que aparece em seguida:
+
+![Source](img/pr1.png)
+
+Ele servirá para caso você deseje enviar para o dono do repositório original uma solicitação de pull, ou seja, fazer com que ele puxe as alterações que você fez no seu repositório para o repositório dele, original
+
+Ao clicar nesse botão, você será direcionado para uma página que fará a avaliação se esse `pull request` terá conflitos ou não com o código no repositório original. Caso não tenha, bastão clicar no botão de `Create pull request`
+
+![Source](img/pr2.png)
+
+Você irá colocar um nome intuitivo, que demonstre a funcionalidade adicionada e o ideal é que você também crie uma boa descrição do que desenvolveu, não somente explicando o que é, mas ensinando ao dono do repositório original a forma como ele poderá testar também
+
+Depois disso, basta esperar para que o dono da branch original aceite o seu pull request
+
+## Finalização
+
+Existem diversas outras funcionalidades do Git e do Github, porém tenho certeza que com tudo isso que vocês viram hoje vocês já conseguem desenvolver um projeto de uma forma bem legal
+
+Recomendo sempre vocês darem uma olhada na [documentação do Git](https://git-scm.com/doc), pois qualquer dúvida que apareça pode ser respondida por lá na explicação
+
+**Não esqueçam de deixar o like e se inscrever no [canal do Youtube](https://www.youtube.com/@EstudandoDevops) **
+
+E aproveitando já aperta o Star para fortalecer o repo!
+
+![Source](img/star.png)
+
+Até a próxima...
+
+## Clone
 
 ## Configurações Globais
 
